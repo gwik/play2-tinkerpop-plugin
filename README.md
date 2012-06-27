@@ -1,9 +1,32 @@
 # Play 2 Tinkerpop Blueprints graph plugin
 
-A GraphDB plugin for [Play 2 framework](http://playframework.org/) using the
+A GraphDB plugin for the [Play 2 framework](http://playframework.org/) using the
 [Tinkerpop blueprints stack](https://github.com/tinkerpop/blueprints/wiki/).
 
 ## Installation
+
+### sbt
+
+Edit your Play2 project/Build.scala
+
+     import sbt._
+     import Keys._
+     import PlayProject._
+
+     object ApplicationBuild extends Build {
+
+       val appName         = "MyPlayApp"
+       val appVersion      = "1.0-SNAPSHOT"
+
+       val appDependencies = Seq(
+           "org.gwikzone" %% "play2-tinkerpop-plugin-orientdb" % "1.0-SNAPSHOT"
+       )
+
+       val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).
+           dependsOn(uri("git://github.com/gwik/play2-tinkerpop-plugin.git"))
+
+     }
+
 
 ### Plugins declaration
 
