@@ -3,8 +3,6 @@ package org.gwikzone.play.tinkerpop
 import com.tinkerpop.blueprints.Graph
 import play.api._
 import play.api.Play.current
-import sun.reflect.generics.reflectiveObjects.NotImplementedException
-import com.tinkerpop.blueprints.TransactionalGraph
 import com.tinkerpop.frames.FramedGraph
 
 
